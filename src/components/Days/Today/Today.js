@@ -13,9 +13,6 @@ export default function Today() {
                 }
                 const dayData = await dayResponse.json();
                 setCurrent(dayData);
-                // console.log('------');
-                // console.log(dayData);
-                // console.log('------');
             } catch (error) {
                 setError(error);
             }
@@ -36,8 +33,8 @@ export default function Today() {
                 <span>{ current?.weather?.[0]?.main } ( { current?.weather?.[0]?.description } )</span>
             </h5>
             <div className="additional-info">
-                <div><p><i class="fa-regular fa-location-dot"></i> { current?.name }</p></div>
-                <div><i class="fa-sharp fa-regular fa-calendar-days"></i> <time>{ new Date(current.dt * 1000).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}) }</time></div>
+                <div><p><i className="fa-regular fa-location-dot"></i> { current?.name }</p></div>
+                <div><i className="fa-sharp fa-regular fa-calendar-days"></i> <time>{ new Date(current.dt * 1000).toLocaleDateString('en-US', {month: 'short', day: 'numeric'}) }</time></div>
             </div>
             <div className="moreInfo">
               <div>

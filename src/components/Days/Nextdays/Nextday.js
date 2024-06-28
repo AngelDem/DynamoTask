@@ -13,9 +13,6 @@ export default function NextDay() {
                 }
                 const weekData = await weekResponse.json();
                 setWeek(weekData.list);
-                // console.log('------');
-                // console.log(weekData.list);
-                // console.log('------');
             } catch (error) {
                 setError(error);
             }
@@ -42,10 +39,6 @@ export default function NextDay() {
     });
 
     const highestTempArray = Object.values(highestTempByDate);
-
-    console.log('!!!');
-    console.log(highestTempByDate);
-    console.log('!!!');
 
     return (
         <div id='nextDays'>
